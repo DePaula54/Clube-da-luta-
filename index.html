@@ -715,8 +715,8 @@ input:focus { border-color: var(--text) !important; outline: none; }
   </div>
 
   <div style="width:100%;max-width:360px;display:flex;flex-direction:column;gap:10px;">
-    <input id="inp-email" type="email" placeholder="Email" value="teste@gmail.com" class="login-input"/>
-    <input id="inp-senha" type="password" placeholder="Senha" value="teste123" class="login-input"/>
+    <input id="inp-email" type="email" placeholder="Email" value="" class="login-input"/>
+    <input id="inp-senha" type="password" placeholder="Senha" value="" class="login-input"/>
     <div id="login-erro" style="font-family:Barlow,sans-serif;font-size:12px;color:#e50914;text-align:center;display:none;">Email ou senha incorretos.</div>
     <button onclick="tentarLogin()" class="login-btn ripple">ENTRAR</button>
 
@@ -735,7 +735,7 @@ input:focus { border-color: var(--text) !important; outline: none; }
   <!-- Voltar -->
   <button onclick="ir('landing')" style="margin-top:20px;background:transparent;border:none;color:#444;font-family:Barlow,sans-serif;font-size:12px;cursor:pointer;letter-spacing:1px;">← Voltar</button>
 
-  <div style="font-family:Barlow,sans-serif;font-size:10px;color:#2a2a2a;margin-top:16px;letter-spacing:1px;">teste@gmail.com / teste123</div>
+  <div style="font-family:Barlow,sans-serif;font-size:10px;color:#2a2a2a;margin-top:16px;letter-spacing:1px;"></div>
 </div>
 
 
@@ -1775,7 +1775,7 @@ function tentarLogin(){
   const email=document.getElementById('inp-email').value;
   const senha=document.getElementById('inp-senha').value;
   document.getElementById('login-erro').style.display='none';
-  if(email==='teste@gmail.com'&&senha==='teste123'){
+  if(email==='clubedaluta@gmail.com'&&senha==='lutador123'){
     irParaSelecao();
   } else document.getElementById('login-erro').style.display='block';
 }
@@ -2703,7 +2703,7 @@ function mostrarEmBreveLogin() {
   // Toast notification
   const toast = document.createElement('div');
   toast.style.cssText = 'position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#111;border:1px solid #333;border-radius:10px;padding:14px 24px;font-family:Barlow,sans-serif;font-size:13px;color:#fff;z-index:9999;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.5);animation:fadeSlideIn 0.3s ease;';
-  toast.innerHTML = '🚀 <strong>Cadastro em breve!</strong><br><span style="color:#888;font-size:11px;">Por enquanto use: teste@gmail.com</span>';
+  toast.innerHTML = '🚀 <strong>Cadastro em breve!</strong><br><span style="color:#888;font-size:11px;">Em breve disponível!</span>';
   document.body.appendChild(toast);
   setTimeout(() => { toast.style.opacity='0'; toast.style.transition='opacity 0.4s'; setTimeout(()=>toast.remove(),400); }, 3000);
 }
